@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con Fondo de Imagen</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('img/fondo2.png');
+            /* Descomenta si necesitas el fondo */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: contrast(1.2) brightness(1.1);
+            font-family: Arial, sans-serif;
+        }
+
+        .caja-centrada {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 600px;
+            /* Aumenté el ancho máximo para adaptarse al contenido */
+            width: 100%;
+            box-sizing: border-box;
+            /* Asegura que el padding no afecte el tamaño total */
+        }
+
+        .contenedor-video {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            /* Espacio entre el video y el botón */
+            max-width: 100%;
+            max-height: 800px;
+            /* Ajusta según el tamaño del video */
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .video-estilizado {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            display: block;
+        }
+
+        .boton-centrado {
+            padding: 15px 30px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .boton-centrado:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .boton-centrado:active {
+            background-color: #004085;
+            transform: translateY(0);
+        }
+
+        p {
+            font-weight: 800;
+            font-size: 25px;
+            color: #d00000;
+            text-shadow:
+                2px 2px 0px #fff,
+                -2px 2px 0px #fff,
+                2px -2px 0px #fff,
+                -2px -2px 0px #fff;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="caja-centrada">
+        <div class="contenedor-video">
+            <video class="video-estilizado" controls>
+                <source src="img/video.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
+        <button class="boton-centrado" onclick="siguiente()">Sigamos😊 jiji</button>
+    </div>
+    <script>
+        function siguiente() {
+            window.location.href = "pagina3.html";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con Fondo de Imagen</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('img/fondo1.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: contrast(1.2) brightness(1.1);
+            font-family: Arial, sans-serif;
+        }
+
+        .caja-centrada {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .contenedor {
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+        }
+
+        .boton-centrado {
+            padding: 15px 30px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .boton-centrado:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .boton-centrado:active {
+            background-color: #004085;
+            transform: translateY(0);
+        }
+
+        p {
+            font-weight: 800;
+            font-size: 25px;
+            color: #d00000;
+            text-shadow:
+                2px 2px 0px #fff,
+                -2px 2px 0px #fff,
+                2px -2px 0px #fff,
+                -2px -2px 0px #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="caja-centrada">
+        <p>Desde que te conocí, mis días han sido mejores. Tu alegría y tu forma de ser hacen que todo sea más
+            divertido. Me encanta pasar tiempo contigo y descubrir juntos nuevas experiencias. Eres una persona
+            increíble, y me siento afortunado de tenerte en mi vida. Gracias por estar ahí, por ser tan especial y hacer
+            que cada momento cuente.</p>
+
+        <div class="contenedor">
+            <button class="boton-centrado" onclick="siguiente()">Sigamos😊 jiji</button>
+        </div>
+    </div>
+    <script>
+        function siguiente() {
+            window.location.href = "pagina2.html";
+        }
+    </script>
+</body>
+
+</html>
